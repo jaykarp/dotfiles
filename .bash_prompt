@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# @0xADADA’s bash prompt, inspired by gf3’s "Sexy" bash Prompt and vim-airline
 
 function __prompt {
     if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
@@ -133,10 +132,10 @@ function __prompt {
         # Check the exit code of the previous command and display different
         # colors in the prompt accordingly.
         if [ $EXIT_CODE -eq 0 ]; then
-            printf '\001%s\002%s\001%s\002 ' \
+            printf ' \001%s\002%s\001%s\002 ' \
                 "${WHITE}" "${PREFIX_0}" "${RESET}"
         else
-            printf '\001%s\002[%s]%s\001%s\002 ' \
+            printf ' \001%s\002[%s]%s\001%s\002 ' \
                 "${RED}" "${EXIT_CODE}" "${PREFIX_1}" "${RESET}"
         fi
     }
@@ -144,7 +143,7 @@ function __prompt {
     function init_prompt {
         EXIT_CODE="$?"
         PS1=""
-        PS1+="\001${GRAY_BG}\002\001${BLACK}\002\u@\001${BOLD}\002\001${BLACK}\002\h " # user@host
+        PS1+="\001${GRAY_BG}\002\001${WHITE}\002 \u\001${BLACK}\002@\001${BOLD}\002\001${WHITE}\002\h " # user@host
         PS1+="\001${BLACK2_BG}\002\001${GRAY}\002 \W \001${RESET}\002"                # ~
         PS1+="\$(prompt_git)"                                                          # <git branch>
         PS1+="\$(status_prefix)"                                                       # $
@@ -154,4 +153,4 @@ function __prompt {
 }
 
 __prompt
-unset __prompt
+
