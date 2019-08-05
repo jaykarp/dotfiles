@@ -6,7 +6,6 @@ export PATH="usr/local/bin:$PATH";
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{aliases,bash_prompt}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-	echo "sourced $file"
 done;
 unset file;
 

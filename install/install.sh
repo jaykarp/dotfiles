@@ -14,6 +14,9 @@ ln -sf ~/.dotfiles/.bash_profile ~/.bash_profile
 SYMLINKS+=('.bash_profile')
 ln -sf ~/.dotfiles/.bash_prompt ~/.bash_prompt
 SYMLINKS+=('.bash_prompt')
+ln -sf ~/.dotfiles/.aliases ~/.aliases
+SYMLINKS+=('aliases')
+
 
 source ~/.bashrc
 vim +PluginInstall +qall
