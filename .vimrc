@@ -9,6 +9,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Color scheme
 Plugin 'morhetz/gruvbox'
 
+" Line Numbers
+Plugin 'myusuf3/numbers.vim'
+
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 
@@ -35,7 +38,7 @@ filetype plugin indent on    " required
 
 " Color scheme 
 colorscheme gruvbox
-:set bg=dark
+set bg=dark
 syntax on
 
 let g:airline_theme='gruvbox'
