@@ -1,6 +1,7 @@
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+alias ls='ls -G'
 alias f='open -a Finder ./'
 alias ap='ssh -X jlk2225@clac.cs.columbia.edu'
 alias cunix='ssh jlk2225@cunix.columbia.edu'
