@@ -9,6 +9,9 @@ for file in ~/.{aliases,bash_prompt}; do
 done;
 unset file;
 
+# set Vi mode in bash
+set -o vi
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 

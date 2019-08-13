@@ -28,13 +28,13 @@ Plugin 'mileszs/ack.vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Vim Tmux Movement
+Plugin 'christoomey/vim-tmux-navigator'
 " Sublime Style multiple cursors
 " Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-" filetype plugin on
 
 " Color scheme 
 colorscheme gruvbox
@@ -45,3 +45,18 @@ let g:airline_theme='gruvbox'
 
 " Add extra whitespace on each line
 set virtualedit+=onemore
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines

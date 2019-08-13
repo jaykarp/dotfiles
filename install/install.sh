@@ -4,6 +4,7 @@ sudo rm -rf ~/.bash_prompt > /dev/null 2>&1
 sudo rm -rf ~/.tmux > /dev/null 2>&1
 sudo rm -rf ~/.tmux.conf > /dev/null 2>&1
 sudo rm -rf ~/.gitconfig > /dev/null 2>&1
+sudo rm -rf ~/.tmux.conf > /dev/null 2>&1
 
 SYMLINKS=()
 ln -sf ~/.dotfiles/.vimrc ~/.vimrc
@@ -16,7 +17,8 @@ ln -sf ~/.dotfiles/.bash_prompt ~/.bash_prompt
 SYMLINKS+=('.bash_prompt')
 ln -sf ~/.dotfiles/.aliases ~/.aliases
 SYMLINKS+=('aliases')
-
+ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
+SYMLINKS+=('tmux.conf')
 
 source ~/.bashrc
 vim +PluginInstall +qall

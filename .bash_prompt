@@ -42,8 +42,8 @@ function __prompt {
             BLACK1_BG=$(tput setab 237)
             BLACK2=$(tput setaf 239)
             BLACK2_BG=$(tput setab 239)
-            RED=$(tput setaf 124)
-            RED_BG=$(tput setab 124)
+            RED=$(tput setaf 167)
+            RED_BG=$(tput setab 167)
             GREEN=$(tput setaf 142)
             YELLOW=$(tput setaf 214)
             BLUE=$(tput setaf 66)
@@ -51,9 +51,9 @@ function __prompt {
             AQUA=$(tput setaf 108)
             GRAY=$(tput setaf 246)
             GRAY_BG=$(tput setab 246)
-            WHITE=$(tput setaf 223)
-            ORANGE=$(tput setaf 208)
-            ORANGE_BG=$(tput setab 208)
+            WHITE=$(tput setaf 15)
+            ORANGE=$(tput setaf 214)
+            ORANGE_BG=$(tput setab 214)
         else
             BLACK=$(tput setaf 0)
             BLACK1=$(tput setaf 0)
@@ -77,8 +77,8 @@ function __prompt {
     function git_state_color {
         if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
             local STATE=237
-            local RED_BG=124
-            local ORANGE_BG=208
+            local RED_BG=167
+            local ORANGE_BG=214
         else
             local STATE=0
             local RED_BG=1
