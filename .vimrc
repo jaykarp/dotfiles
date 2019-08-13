@@ -33,6 +33,10 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Sublime Style multiple cursors
 " Plugin 'terryma/vim-multiple-cursors'
 
+" Language Support
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
