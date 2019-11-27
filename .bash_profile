@@ -1,3 +1,6 @@
+# Silence Stupid Mac Bash Depreciation
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Add `~/bin` to the `$PATH`
 export PATH="usr/local/bin:$PATH";
 
@@ -35,3 +38,20 @@ if type _git &> /dev/null; then
 	complete -o default -o nospace -F _git g;
 fi;
 
+# History Changes
+
+# Change History Time Formatting
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
+
+# Increase History File Size
+export HISTFILESIZE=10000
+export HISTSIZE=1000
+
+# ignore ls ps and history in history
+export HISTIGNORE="ls:ps:history"
+
+# Store multiline commands in one entry
+shopt -s cmdhist
+
+
+export PATH="$HOME/.cargo/bin:$PATH"

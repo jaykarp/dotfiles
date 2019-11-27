@@ -1,0 +1,3 @@
+set show-mode-in-prompt on
+set vi-ins-mode-string " └──錄 (ins):"
+set vi-cmd-mode-string " └──錄 (cmd):"
