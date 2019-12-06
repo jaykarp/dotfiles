@@ -53,5 +53,5 @@ export HISTIGNORE="ls:ps:history"
 # Store multiline commands in one entry
 shopt -s cmdhist
 
-
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
