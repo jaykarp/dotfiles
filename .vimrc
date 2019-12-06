@@ -48,62 +48,8 @@ Plug 'klen/python-mode'
 
 " COC vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'neoclide/coc.nvim'
 
 call plug#end()
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-
-"" let Vundle manage Vundle, required
-"Plugin 'VundleVim/Vundle.vim'
-"" Color scheme
-"Plugin 'morhetz/gruvbox'
-
-"" Line Numbers
-"Plugin 'myusuf3/numbers.vim'
-
-"" Nerdtree
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'xuyuanp/nerdtree-git-plugin'
-"Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-"Plugin 'ryanoasis/vim-devicons'
-
-""Syntax checking
-"Plugin 'scrooloose/syntastic'
-
-""vim git
-"Plugin 'tpope/vim-fugitive'
-
-"" Searching
-"Plugin 'mileszs/ack.vim'
-
-"" Status bar
-"Plugin 'bling/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-
-"" Vim Tmux Movement
-"Plugin 'christoomey/vim-tmux-navigator'
-"" Sublime Style multiple cursors
-"" Plugin 'terryma/vim-multiple-cursors'
-
-"" Nerdcommenter
-"Plugin 'scrooloose/nerdcommenter'
-
-"" Language Support
-"Plugin 'pangloss/vim-javascript'
-"Plugin 'mattn/emmet-vim'
-"Plugin 'mxw/vim-jsx'
-"Plugin 'lervag/vimtex'
-"Plugin 'stanangeloff/php.vim'
-	""Python mode
-"Plugin 'klen/python-mode'
-
-
-"" COC vim
-"Plugin 'neoclide/coc.nvim'
-
-"call vundle#end()            " required
-"filetype plugin indent on    " required
 
 " Color scheme 
 colorscheme gruvbox
@@ -112,6 +58,9 @@ syntax on
 
 let g:airline_theme='gruvbox'
 set encoding=UTF-8
+
+" Stop using swp files you monster
+set directory^=$HOME/.vim/tmp//
 
 " Add extra whitespace on each line
 set virtualedit+=onemore
@@ -161,28 +110,9 @@ let mapleader=" "
 " Nerdtree Specs
 map <C-m> :NERDTreeToggle<CR>
 map <leader>ne :NERDTree<cr>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 set autochdir
 let g:NERDTreeChDirMode = 2
-
-
-" sync open file with NERDTree
- " Check if NERDTree is open or active
-"function! IsNERDTreeOpen()
-  "return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-"endfunction
-
-"" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-"" file, and we're not in vimdiff
-"function! SyncTree()
-  "if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    "NERDTreeFind
-    "wincmd p
-  "endif
-"endfunction
-
-"" Highlight currently open buffer in NERDTree
-"autocmd BufEnter * call SyncTree()
-
 
 " Emmet Config
 let g:user_emmet_leader_key='<C-y>'
